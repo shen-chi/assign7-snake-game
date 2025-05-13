@@ -4,7 +4,7 @@
 - Contact: 111703003@g.nccu.edu.tw
 ---
 
-## 2D Console Game (Part2)
+# 2D Console Game (Part2)
 
 Obejctive: Building a console-based Rack-Paper-Scissor Royale
 
@@ -14,7 +14,7 @@ Inspiration: https://aslangames.itch.io/rock-paper-scissors-royal
 ## Game Concepts
 
 - Entities & Types
-Every game object is one of three types: Rock, Paper, or Scissor.
+Every game object is one of three types: **Rock**, **Paper**, or **Scissor**.
 
 - Assimilation Rule
 When two objects collide, the winning type “assimilates” (converts) the losing one:
@@ -29,19 +29,13 @@ The player controls a single **Rock**. At any time, they can switch which Rock t
 - Win/Loss Conditions
 1. Goal: For the “Rock” faction, assimilate as many Scissors as possible while avoiding Papers.
 2. Endgame: The simulation ends when one of the three types is completely eliminated.
-### Description
-
-  RPS is a game that player can control one of the **RPSType** (Rock, Paper, and Scissors).
-Naturally, when **Paper** collides with **Rock**, **Paper** will assimilate(同化) **Rock**.
-That is, **Rock** will becomes **Paper**. Other condition follows the role of Rock-Paper-Scissors.
-
-  The player plays a role as a **Rock**. For each frame, the player can command one of all the **Rocks** to move by any direction. For the Kingdom of **Rock** , the player should assimilate **Scissors** and avoid **Paper** as much as possible.
-The game ends if one of RPS disappers.
+   
+## Assignment Tasks
 
 In this assignment, you are required to:
 1. Create  `RPSGameObject` and implement the Collision feature.
 2. Handle player's input  to ** move (W, A, S, D)** and **switch (Tab)** between RPSObjects.
-3. Determine the winner and print out.
+3. When the game ends, determine the winner and print out.
 
 ### Sample Output
 ![image](https://github.com/user-attachments/assets/651bcafa-f3cb-4a75-a663-c54e7c015b0d)
@@ -52,17 +46,19 @@ In this assignment, you are required to:
 |-----|-----|
 |Submit the assignment|20|
 |Able to compile|20|
-|Draw static GameObject correctly|20|
-|Draw dynamic GameObject correctly|10|
-|Implement IconFactory|10|
-|Implement GameObjectFactory|10|
-|Handling key input to control GameObjects|10|
+|RPS Objects perform assimilation correctly|20|
+|Handling key input to control Rock|10|
+|Player can switch between different Rocks|10|
+|Game break and winner determination|10|
+|More features(please create a "Readme.md" to show your additional designs)|10|
 
 ### Reminder
 
-1. The default include path is set to `include/`, any header file below `include` can be included directly.
-2. You can add new files for more features, but the required part noted by `//TODO` must be implemented.
-3. After finishing this assignment, you can start to think what games you can make with the architecture.
+1. GameObjects should not move outside the map.
+2. Pseudo code of collision:
 
-### UML Class Diagram
-<img width="815" alt="image" src="https://github.com/user-attachments/assets/8faa7f01-0e0c-478d-94cf-80ee6888c480" />
+```
+for colliderA, colliderB in all colliders
+  if colliderA intersect with colliderB
+    perfom onCollision()
+```
