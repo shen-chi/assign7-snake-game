@@ -7,7 +7,7 @@
 
 enum RPSType { ROCK, PAPER, SCISSORS };
 
-class RPS : public GameObject, public ICollider {
+class RPSGameObject : public GameObject, public ICollider {
 
 public:
   void update() override;
