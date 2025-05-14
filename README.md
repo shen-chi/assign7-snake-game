@@ -8,7 +8,7 @@
 
 Obejctive: Building a console-based Rack-Paper-Scissor Royale
 
-Inspiration: https://aslangames.itch.io/rock-paper-scissors-royal
+Inspiration: https://aslangames.itch.io/rock-paper-scissors-royale
 ![image](https://github.com/user-attachments/assets/880e5d43-cd23-4b9d-9d5a-5ed0ea09d7bd)
 
 ## Game Concepts
